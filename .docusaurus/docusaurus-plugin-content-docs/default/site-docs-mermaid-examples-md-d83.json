@@ -1,0 +1,26 @@
+{
+  "id": "mermaid-examples",
+  "title": "Mermaid 图表示例",
+  "description": "本页面展示了如何在知识库中使用 Mermaid 图表。",
+  "source": "@site/docs/mermaid-examples.md",
+  "sourceDirName": ".",
+  "slug": "/mermaid-examples",
+  "permalink": "/docs/mermaid-examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/mermaid-examples.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Mermaid 图表示例"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "系统设计",
+    "permalink": "/docs/system-design"
+  },
+  "next": {
+    "title": "Create a Document",
+    "permalink": "/docs/tutorial-basics/create-a-document"
+  }
+}

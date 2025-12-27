@@ -1,0 +1,238 @@
+.animatedButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  background: transparent;
+}
+
+.buttonContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+}
+
+.buttonText {
+  position: relative;
+}
+
+.buttonRipple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+/* Primary variant */
+.animatedButton.primary {
+  background: var(--wiki-primary-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.animatedButton.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.animatedButton.primary .buttonRipple {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.animatedButton.primary:active .buttonRipple {
+  width: 300px;
+  height: 300px;
+}
+
+/* Secondary variant */
+.animatedButton.secondary {
+  background: transparent;
+  color: var(--ifm-color-primary);
+  border: 2px solid var(--ifm-color-primary);
+}
+
+.animatedButton.secondary:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.animatedButton.secondary .buttonRipple {
+  background: rgba(37, 99, 235, 0.3);
+}
+
+.animatedButton.secondary:active .buttonRipple {
+  width: 300px;
+  height: 300px;
+}
+
+/* Outline variant */
+.animatedButton.outline {
+  background: transparent;
+  color: var(--ifm-color-emphasis-800);
+  border: 2px solid var(--ifm-color-emphasis-300);
+}
+
+.animatedButton.outline:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest);
+  transform: translateY(-1px);
+}
+
+.animatedButton.outline .buttonRipple {
+  background: var(--ifm-color-primary-light);
+}
+
+.animatedButton.outline:active .buttonRipple {
+  width: 300px;
+  height: 300px;
+}
+
+/* Ghost variant */
+.animatedButton.ghost {
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.animatedButton.ghost:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.animatedButton.ghost .buttonRipple {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.animatedButton.ghost:active .buttonRipple {
+  width: 300px;
+  height: 300px;
+}
+
+/* Size variants */
+.animatedButton.small {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.875rem;
+}
+
+.animatedButton.medium {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+}
+
+.animatedButton.large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+.animatedButton.xlarge {
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+}
+
+/* With icon */
+.animatedButton.withIcon .buttonIcon {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.animatedButton.withIcon:hover .buttonIcon {
+  transform: translateX(2px);
+}
+
+/* Loading state */
+.animatedButton.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.animatedButton.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.animatedButton.loading .buttonContent {
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Disabled state */
+.animatedButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.animatedButton:disabled:hover {
+  transform: none !important;
+}
+
+/* Focus styles */
+.animatedButton:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .animatedButton.large {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .animatedButton.xlarge {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .animatedButton.medium {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .animatedButton.large {
+    padding: 0.75rem 1.8rem;
+    font-size: 0.9375rem;
+  }
+  
+  .animatedButton.xlarge {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}

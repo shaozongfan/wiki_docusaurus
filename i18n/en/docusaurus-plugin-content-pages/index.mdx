@@ -1,0 +1,59 @@
+---
+title: Hello from Personal Knowledge Wiki
+---
+
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
+import Heading from '@theme/Heading';
+import styles from './index.module.css';
+
+function HomepageHeader() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <Heading as="h1" className="hero__title">
+          {siteConfig.title}
+        </Heading>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/programming">
+            Browse Knowledge Base 📚
+          </Link>
+        </div>
+        <div className={styles.contactInfo}>
+          <p className={styles.contactTitle}>Contact Information</p>
+          <div className={styles.contactMethods}>
+            <div className={styles.contactItem}>
+              <span className={styles.contactIcon}>📧</span>
+              <span>Email: contact@knowledge-wiki.com</span>
+            </div>
+            <div className={styles.contactItem}>
+              <span className={styles.contactIcon}>💬</span>
+              <span>WeChat: KnowledgeWiki</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default function Home() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="A comprehensive knowledge base for programming, system design, and technical documentation.">
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
+    </Layout>
+  );
+}

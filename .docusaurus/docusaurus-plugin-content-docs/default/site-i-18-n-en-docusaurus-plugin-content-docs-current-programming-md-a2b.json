@@ -1,0 +1,26 @@
+{
+  "id": "programming",
+  "title": "Programming Technologies",
+  "description": "This section contains learning notes and practical experiences for various programming languages, frameworks, and technologies.",
+  "source": "@site/i18n/en/docusaurus-plugin-content-docs/current/programming.md",
+  "sourceDirName": ".",
+  "slug": "/programming",
+  "permalink": "/en/docs/programming",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/programming.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Programming Technologies"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/en/docs/intro"
+  },
+  "next": {
+    "title": "System Design",
+    "permalink": "/en/docs/system-design"
+  }
+}

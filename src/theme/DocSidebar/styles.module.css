@@ -1,0 +1,55 @@
+.categoryItem {
+  margin: 0.25rem 0;
+}
+
+.categoryLink {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: var(--wiki-transition);
+  font-weight: 500;
+  position: relative;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.categoryLink:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+  transform: translateX(4px);
+}
+
+.categoryLink::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--ifm-color-primary);
+  border-radius: 0 2px 2px 0;
+  transition: var(--wiki-transition);
+}
+
+.categoryLink:hover::before,
+.categoryLink.menu__link--active::before {
+  height: 20px;
+}
+
+.categoryLink.menu__link--active {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-dark);
+  font-weight: 600;
+}
+
+.navLink {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 996px) {
+  .categoryLink {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

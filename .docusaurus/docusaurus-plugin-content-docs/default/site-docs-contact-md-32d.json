@@ -1,0 +1,22 @@
+{
+  "id": "contact",
+  "title": "联系我们",
+  "description": "欢迎与我们联系！我们很乐意听到您的意见和建议。",
+  "source": "@site/docs/contact.md",
+  "sourceDirName": ".",
+  "slug": "/contact",
+  "permalink": "/docs/contact",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contact.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "联系我们"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Deploy your site",
+    "permalink": "/docs/tutorial-basics/deploy-your-site"
+  }
+}

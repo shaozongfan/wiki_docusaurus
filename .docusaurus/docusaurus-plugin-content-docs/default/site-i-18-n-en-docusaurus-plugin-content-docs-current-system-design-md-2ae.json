@@ -1,0 +1,26 @@
+{
+  "id": "system-design",
+  "title": "System Design",
+  "description": "This section contains software architecture design, distributed systems, microservices, and related knowledge.",
+  "source": "@site/i18n/en/docusaurus-plugin-content-docs/current/system-design.md",
+  "sourceDirName": ".",
+  "slug": "/system-design",
+  "permalink": "/en/docs/system-design",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/system-design.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "System Design"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Programming Technologies",
+    "permalink": "/en/docs/programming"
+  },
+  "next": {
+    "title": "Mermaid Chart Examples",
+    "permalink": "/en/docs/mermaid-examples"
+  }
+}
